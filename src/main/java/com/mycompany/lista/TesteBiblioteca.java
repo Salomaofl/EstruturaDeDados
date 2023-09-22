@@ -10,6 +10,11 @@ public class TesteBiblioteca {
         lista.add("Mariana");
         
         
+        System.out.println(lista);
+        System.out.println("Tamanho da lista=" + lista.size());
+        System.out.println("Inicio da lista=" + lista.getFirst());
+        System.out.println("Fim da lista=" + lista.getLast());
+        
     }
     
 }
