@@ -69,4 +69,33 @@ public class ListaEncadeada<Tipo> {
         }
         return atual;
     }
+
+    public void remove(Tipo elemento) {
+        No anterior = null;
+        No atual = this.inicio;
+
+        for (int i = 0; i < this.getTamanho(); i++) {
+            if (this.tamanho == 1) {
+                this.inicio = null;
+                this.fim = null;
+            } else if (atual == inicio) {
+                this.inicio = atual.getProximo();
+                atual.setProximo(null);
+            } else if (atual == fim) {
+                this.fim = anterior;
+                anterior.setProximo(null);
+            } else {
+                anterior.setProximo(atual.getProximo());
+                atual = null;
+                this.tamanho--;
+                break;
+            }
+            
+        
+        anterior = atual;
+        atual = atual.getProximo();
+
+    }
+
+}
 }
